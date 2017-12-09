@@ -1,50 +1,55 @@
-var url = 'http://localhost/server.php';
+// var url = 'http://localhost/server.php';
+var url = '/show-info';
+
+
 
 
 
 function run_get() {
-    jQuery.get(url, {
-        mode: 'give me json'
-    },  function(data) {
-        $("#result").html( data );
-        console.log("Load was performed ", data);
-    }, 'json');
+    // jQuery.get(url, function (data) {
+    //
+    //     //event loop
+    //     $("#result").html( data );
+    //     console.log("Load was performed ", data);
+    // }, 'json');
 
     // console.log('hello');
-
+    //
     // jQuery.get(url, {
+    //     mode: 'give me json',
     //     name: "John",
     //     time: "2pm"
     // }, function (data, mode, result) {
     //     console.log(data);
     //     console.log(arguments);
     // });
-    //
-    // jQuery.get(url, {
-    //     name: "John",
-    //     time: "2pm"
-    // })
-    //     .done(function() {
-    //         console.log('done', arguments);
-    //     })
-    //     .fail(function() {
-    //         console.log('fail', arguments);
-    //     })
-    //     .always(function () {
-    //         console.log('always ', arguments);
-    //     })
-    //     .done(function() {
-    //         console.log('done', arguments);
-    //     })
-    //     .done(function() {
-    //         console.log('done', arguments);
-    //     })
-    //     .done(function() {
-    //         console.log('done', arguments);
-    //     })
-    //     .done(function() {
-    //         console.log('done', arguments);
-    //     });
+
+    jQuery.get(url, {
+        name: "John",
+        time: "2pm"
+    })
+        .done(function() {
+            console.log('done', arguments);
+        })
+        .fail(function() {
+            console.log('fail', arguments);
+        })
+        .always(function () {
+            console.log('always ', arguments);
+        })
+        .done(function() {
+            console.log('done1', arguments);
+        })
+        .done(function() {
+            console.log('done2', arguments);
+        })
+        // .done(function() {
+        //     console.log('done', arguments);
+        // })
+        // .done(function() {
+        //     console.log('done', arguments);
+        // })
+    ;
 }
 
 function run_post() {
@@ -105,7 +110,7 @@ function run_json() {
             console.log('fail', arguments);
         })
         .always(function () {
-            console.log('who cares? ', arguments);
+            console.log('always', arguments);
         });
 }
 
@@ -122,23 +127,23 @@ function run_XMLHttpRequest() {
     xhttp.send();
 }
 
-
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http:///%7B%7Bserver%7D%7D/api/patients/me",
-    "method": "PUT",
-    "headers": {
-        "content-type": "application/x-www-form-urlencoded",
-        "apikey": "{{apikey_patient}}",
-        "cache-control": "no-cache",
-        "postman-token": "7c95c572-d048-fa19-c132-341ad271d192"
-    },
-    "data": {
-        "sdfdsf": "dsfdfdff"
-    }
-};
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
+//
+// var settings = {
+//     "async": true,
+//     "crossDomain": true,
+//     "url": "http:///%7B%7Bserver%7D%7D/api/patients/me",
+//     "method": "PUT",
+//     "headers": {
+//         "content-type": "application/x-www-form-urlencoded",
+//         "apikey": "{{apikey_patient}}",
+//         "cache-control": "no-cache",
+//         "postman-token": "7c95c572-d048-fa19-c132-341ad271d192"
+//     },
+//     "data": {
+//         "sdfdsf": "dsfdfdff"
+//     }
+// };
+//
+// $.ajax(settings).done(function (response) {
+//     console.log(response);
+// });

@@ -6,22 +6,15 @@
 </head>
 <body>
 
-    <!--<img src="http://symfony.com/doc/master/_images/http-xkcd.png">-->
+    <img src="http://symfony.com/doc/master/_images/http-xkcd.png">
 
-    <!--<form method="post" action="server.php" target="someFrame">-->
-        <!--Username: <input type="text" name="username"><br />-->
-        <!--Password: <input type="password" name="password"><br />-->
-        <!--<input type="submit">-->
-    <!--</form>-->
+    <form method="post" action="/show-info" target="someFrame">
+        Username: <input type="text" name="username"><br />
+        Password: <input type="password" name="password"><br />
+        <input type="submit">
+    </form>
 
-
-    <!--<iframe src="server.php" name="someFrame"></iframe>-->
-
-
-
-
-
-
+    <iframe src="/show-info" name="someFrame"></iframe>
 
     <button onclick="run_get()">Run get</button>
     <button onclick="run_post()">Run post</button>
@@ -31,7 +24,7 @@
 
     <div id="result">result here</div>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/jquery.js"></script>
     <script src="client.js"></script>
 </body>
 </html>
